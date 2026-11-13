@@ -1,0 +1,50 @@
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.profile p {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.profile img {
+  width: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.all-students-table-container {
+  width: 88%;
+  margin-inline: auto;
+  margin-top: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.all-students-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+.all-students-table th,
+.all-students-table td {
+  padding: 1rem;
+  text-align: left;
+}
+.all-students-table th {
+  background-color: rgb(215, 252, 215);
+  padding-block: 10px;
+}
+.all-students-table td {
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 600px) {
+  .all-students-table-container {
+    width: calc(100% - 2rem);
+  }
+
+  .all-students-table {
+    min-width: 640px;
+  }
+}

@@ -1,0 +1,161 @@
+.top-header .upper-layer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.upper-layer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 10px;
+}
+.upper-layer h1 {
+  font-size: 1.2rem;
+  margin-right: auto;
+}
+.upper-layer input {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  height: 32px;
+  padding: 3px;
+  border: none;
+}
+.upper-layer input:focus {
+  outline: none;
+  border: none;
+}
+.upper-layer .search-btn {
+  display: flex;
+  flex: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(187, 183, 183);
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+.upper-layer form {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  background-color: rgb(252, 249, 249);
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.upper-layer button {
+  border-radius: 7px;
+  width: 100px;
+  padding: 5px;
+  border: none;
+  background-color: rgb(17, 167, 17);
+  color: white;
+}
+.upper-layer .add-students {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.filter-options {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-inline: 5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.filter-options .all-button {
+  padding: 4px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(134, 131, 131);
+}
+.filter-options .sort-by {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: grey;
+  color: white;
+}
+.filter-options .results {
+  margin-right: auto;
+}
+.filter-options .sort-by:hover {
+  background-color: rgb(73, 71, 71);
+}
+.filter-options .options {
+  text-align: center;
+  position: absolute;
+  z-index: 11;
+  top: 30px;
+  border-radius: 5px;
+  background-color: rgb(27, 180, 27);
+  padding: 1rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.options .filters {
+  color: rgb(51, 49, 49);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+.options .filters:hover {
+  background-color: green;
+}
+.cover {
+  background-color: rgba(128, 128, 128, 0.486);
+  opacity: 0.2;
+  width: 100vw;
+  height: 500px;
+  position: absolute;
+  top: -80px;
+  z-index: 4;
+}
+
+@media (min-width: 600px) {
+  .upper-layer {
+    padding-inline: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .upper-layer {
+    align-items: center;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .upper-layer h1 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .upper-layer form {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .upper-layer .add-students {
+    width: auto;
+    min-width: 100px;
+    padding: 13px;
+  }
+
+  .filter-options {
+    justify-content: flex-end;
+    padding-inline: 1rem;
+    gap: 0.5rem;
+  }
+
+  .filter-options .results {
+    flex-basis: 100%;
+  }
+
+  .filter-options .options {
+    right: 1rem;
+    max-width: calc(100vw - 2rem);
+  }
+}

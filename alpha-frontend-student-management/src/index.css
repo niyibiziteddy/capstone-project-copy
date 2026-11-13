@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.spiner span {
+  margin-inline: auto !important;
+  width: 200px !important;
+  height: 200px !important;
+}
+.spiner {
+  margin-top: 4rem;
+  width: 80%;
+  height: 200px;
+  margin-inline: auto;
+}
