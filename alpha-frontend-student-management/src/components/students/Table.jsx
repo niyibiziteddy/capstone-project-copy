@@ -72,7 +72,7 @@ export async function studentsLoader({ request }) {
   try {
     const url = new URL(request.url);
     console.log(url);
-    const response = await apiClient.get(url.search);
+    const response = await apiClient.get(url.search ? url.search : "?page=1");
     return response.data;
   } catch (error) {
     console.error("studentsLoader error:", error);
