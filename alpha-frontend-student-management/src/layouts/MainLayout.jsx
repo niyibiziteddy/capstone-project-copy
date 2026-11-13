@@ -4,7 +4,7 @@ import "./MainLayout.css";
 import logo from "../assets/logo.png";
 import menu_lines from "../assets/menu-outline.png";
 import SideBar from "../components/Navigation/SideBar.jsx";
-import NavBar from "../components/Navigation/navBar.jsx";
+import NavBar from "../components/Navigation/NavBar.jsx";
 
 export default function MainLayout() {
   const isDesktop = useMediaQuery({ minWidth: 600 });

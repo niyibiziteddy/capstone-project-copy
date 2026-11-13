@@ -1,6 +1,6 @@
 import TopHeader from "../components/students/TopHeader";
 import Table from "../components/students/Table";
-import Pagination from "../components/students/Pagination";
+import Pagination from "../components/students/Pagination.jsx";
 import Footer from "../components/Footer";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import "./AllStudents.css";
