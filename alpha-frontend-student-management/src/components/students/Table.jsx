@@ -71,7 +71,7 @@ export default function Table({ students }) {
 export async function studentsLoader({ request }) {
   try {
     const url = new URL(request.url);
-    console.log(request);
+    console.log(url);
     const response = await apiClient.get(url.search);
     return response.data;
   } catch (error) {
