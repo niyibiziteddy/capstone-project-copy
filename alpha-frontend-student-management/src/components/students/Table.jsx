@@ -70,8 +70,8 @@ export default function Table({ students }) {
 
 export async function studentsLoader({ request }) {
   try {
-    console.log(request);
     const url = new URL(request.url);
+    console.log(request);
     const response = await apiClient.get(url.search);
     return response.data;
   } catch (error) {
