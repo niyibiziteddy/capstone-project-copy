@@ -25,8 +25,7 @@ app.use(
 );
 
 // Each client IP is limited to 100 requests per 15-minute window.
-app.use("/api", limiter);
-
+//app.use("/api", limiter);
 app.use("/api", apiKeyAuth);
 
 // Reports that the server is running.
