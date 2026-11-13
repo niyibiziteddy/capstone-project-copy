@@ -1,7 +1,7 @@
 import profile_url from "../../assets/profile_url.jpg";
 import "./Table.css";
 import StudListDisplayer from "./studListDisplayer";
-import { useSearchParams,useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import apiClient from "../../api/client";
 
 export default function Table({ students }) {
@@ -19,14 +19,16 @@ export default function Table({ students }) {
   const { search } = Object.fromEntries(searchParams);
   const navigate = useNavigate();
 
-
   return (
     <>
       {studentsList.length === 0 && !search && (
         <div className="empty-state-card">
           <h3>No Students Found</h3>
           <p>There are no student records registered in the system yet.</p>
-          <button className="btn-add-empty" onClick={() => navigate("/students/add")}>
+          <button
+            className="btn-add-empty"
+            onClick={() => navigate("/students/add")}
+          >
             Add First Student
           </button>
         </div>
@@ -68,6 +70,7 @@ export default function Table({ students }) {
 
 export async function studentsLoader({ request }) {
   try {
+    console.log(request);
     const url = new URL(request.url);
     const response = await apiClient.get(url.search);
     return response.data;
