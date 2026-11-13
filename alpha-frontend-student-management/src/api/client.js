@@ -1,9 +1,7 @@
 import axios from "axios";
 
-const baseURL = "/api/students";
-console.log("API Base URL:", baseURL);
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_LOCAL_URL,
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
     "API-Key": import.meta.env.VITE_API_KEY,
