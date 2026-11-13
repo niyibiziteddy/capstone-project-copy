@@ -9,7 +9,7 @@ import NavBar from "../components/navigation/NavBar.jsx";
 export default function MainLayout() {
   const isDesktop = useMediaQuery({ minWidth: 600 });
 
-  console.log("Running on the server: " + import.meta.env.VITE_LOCAL_URL);
+  console.log("Running on the server: " + import.meta.env.VITE_API_BASE_URL);
   return (
     <>
       <nav>
